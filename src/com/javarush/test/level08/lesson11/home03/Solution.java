@@ -20,9 +20,19 @@ public class Solution
 
     public static Map<String, String> createPeopleList()
     {
-        //add your code here
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("f1", "n1");
+        map.put("f1", "n2");
+        map.put("f2", "n3");
+        map.put("f2", "n4");
+        map.put("f3", "n5");
+        map.put("f4", "n6");
+        map.put("f5", "n6");
+        map.put("f6", "n7");
+        map.put("f7", "n7");
+        map.put("f8", "n8");
 
-        return null;
+        return map;
     }
 
     public static void printPeopleList(Map<String, String> map)

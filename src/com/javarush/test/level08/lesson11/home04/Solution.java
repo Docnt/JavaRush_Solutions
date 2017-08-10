@@ -1,11 +1,9 @@
 package com.javarush.test.level08.lesson11.home04;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 /* The minimum of N numbers
 1. Read from the keyboard number N.
@@ -21,12 +19,24 @@ public class Solution
     }
 
     public static int getMinimum(List<Integer> array) {
-        // Find minimum here
-        return 0;
+        int i = array.get(0);
+        for (int j : array)
+        {
+            if (j < i) i = j;
+        }
+        return i;
     }
 
     public static List<Integer> getIntegerList() throws IOException {
-        //Create and initialize a list here
-        return null;
+        Scanner scan = new Scanner(System.in);
+        List<Integer> list = new ArrayList<Integer>();
+        int n = scan.nextInt();
+        while (n > 0)
+        {
+            int i = scan.nextInt();
+            list.add(i);
+            n--;
+        }
+        return list;
     }
 }
