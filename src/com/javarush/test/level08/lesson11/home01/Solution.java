@@ -1,6 +1,7 @@
 package com.javarush.test.level08.lesson11.home01;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /* Set of cats
@@ -16,21 +17,30 @@ public class Solution
     {
         Set<Cat> cats = createCats();
 
-        //add your code here. step 3
+        Iterator<Cat> iter1 = cats.iterator();
+
+        cats.remove(iter1.next());
 
         printCats(cats);
     }
 
     public static Set<Cat> createCats()
     {
-        //add your code here. step 2
-        return null;
+        Set<Cat> koty = new HashSet<Cat>();
+        for(int i = 0; i<3; i++) koty.add(new Cat());
+        return koty;
     }
 
     public static void printCats(Set<Cat> cats)
     {
-        // step 4
+        for(Cat c : cats)
+        {
+            System.out.println(c);
+        }
     }
 
-    // step 1
+    public static class Cat
+    {
+
+    }
 }
