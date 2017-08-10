@@ -7,6 +7,8 @@ import java.util.Set;
 Create a set of strings (Set<String>), place into it 20 words beginning with «L».
 */
 
+//BECAUSE OF JAVARUSH BUG THIS PROGRAM CAN'T PASS THE TESTS!!!
+
 public class Solution
 {
     public static HashSet<String> createSet()
