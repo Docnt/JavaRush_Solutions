@@ -29,6 +29,19 @@ public class Solution
 
     public static void sort(int[] array)
     {
-        //add your code here
+        for (int i = 0; i < 5; i++)
+        {
+            int mem = i;
+            for (int j = i + 1; j < array.length; j++)
+            {
+                if (array[j] > array[mem])
+                {
+                    mem = j;
+                }
+            }
+            int temp = array[i];
+            array[i] = array[mem];
+            array[mem] = temp;
+        }
     }
 }
