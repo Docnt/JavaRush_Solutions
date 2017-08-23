@@ -25,12 +25,36 @@ public class Solution
 
     public static void main(String[] args)
     {
-        processExceptions();
+        try
+        {
+            processExceptions();
+        }
+        catch (Exception e)
+        {
+            BEAN.log(e);
+        }
     }
 
-    public static void processExceptions()
+    public static void processExceptions() throws FileSystemException
     {
-        BEAN.methodThrowExceptions();
+        try
+        {
+            BEAN.methodThrowExceptions();
+        }
+        catch (FileSystemException f)
+        {
+            BEAN.log(f);
+            throw f;
+        }
+        catch (CharConversionException c)
+        {
+            BEAN.log(c);
+        }
+        catch (IOException c)
+        {
+            BEAN.log(c);
+        }
+
     }
 
     public static class StatelessBean
